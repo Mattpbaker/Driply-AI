@@ -8,26 +8,80 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">👔</span>
+                <span class="logo-text">Driply</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#why">Why</a>
+                <a href="#tech">Tech</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="nav-link">Learn More</a>
+                <a href="#" class="nav-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
+        <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">👔 AI Outfit Rating</h1>
-                <p class="hero-subtitle">Get instant AI-powered outfit ratings and discover the best styles. Transform your fashion choices with intelligent style analysis.</p>
-                <div class="badges">
-                    <span class="badge">iOS App</span>
-                    <span class="badge">AI-Powered</span>
-                    <span class="badge">SwiftUI</span>
+                <h1 class="hero-title">
+                    <span class="text-normal">Transform Your</span><br>
+                    <span class="text-accent">Style</span>
+                    <span class="text-normal">with</span><br>
+                    <span class="text-accent">AI-Powered</span>
+                    <span class="text-normal">Fashion</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Get instant, intelligent outfit ratings powered by GPT-4 Vision. Discover your best looks and join a community of fashion enthusiasts.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="cta-primary">
+                        Start Rating
+                        <span class="cta-icon">→</span>
+                    </a>
+                    <a href="#how-it-works" class="cta-secondary">Learn How</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="card-header">
+                        <div class="card-profile">
+                            <div class="profile-avatar">👤</div>
+                            <span class="profile-name">fashionista_ai</span>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                            <span class="image-icon">📸</span>
+                            <p>Outfit Rating</p>
+                        </div>
+                    </div>
+                    <div class="card-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- What is Section -->
-    <section class="section section-animate" data-animate="fade-up">
+    <section class="section section-animate" id="features">
         <div class="section-border-top"></div>
         <div class="container">
-            <h2 class="section-title">What is AI Outfit Rating?</h2>
+            <h2 class="section-title">
+                <span class="text-normal">What is</span>
+                <span class="text-accent">AI Outfit Rating?</span>
+            </h2>
             <p class="section-text">
                 AI Outfit Rating is an iOS app that uses advanced AI technology to analyze your outfits and provide detailed ratings and feedback. Whether you're choosing what to wear or exploring fashion trends, get instant, intelligent style analysis powered by GPT-4 Vision.
             </p>
@@ -36,51 +90,43 @@
     </section>
 
     <!-- Features Section -->
-    <section class="section features-section section-animate" data-animate="fade-up">
+    <section class="section features-section section-animate">
         <div class="section-border-top"></div>
         <div class="container">
-            <h2 class="section-title">Key Features</h2>
+            <h2 class="section-title">
+                <span class="text-normal">Key</span>
+                <span class="text-accent">Features</span>
+            </h2>
             <div class="features-grid">
-                <!-- Feature 1 -->
                 <div class="feature-card card-animate">
                     <div class="feature-icon">🤖</div>
                     <h3 class="feature-title">AI-Powered Analysis</h3>
-                    <p class="feature-text">Get detailed outfit ratings with scores from 0-100, complete with comprehensive feedback on fit, style, color coordination, and overall aesthetic. Powered by OpenAI's GPT-4 Vision.</p>
+                    <p class="feature-text">Get detailed outfit ratings with scores from 0-100, complete with comprehensive feedback on fit, style, color coordination, and overall aesthetic.</p>
                 </div>
-
-                <!-- Feature 2 -->
                 <div class="feature-card card-animate">
                     <div class="feature-icon">📸</div>
                     <h3 class="feature-title">Instant Rating</h3>
-                    <p class="feature-text">Simply take a photo or select one from your library. Our AI analyzes your outfit in seconds and provides overall scores, category breakdowns, and detailed feedback.</p>
+                    <p class="feature-text">Simply take a photo or select one from your library. Our AI analyzes your outfit in seconds and provides overall scores and detailed feedback.</p>
                 </div>
-
-                <!-- Feature 3 -->
                 <div class="feature-card card-animate">
                     <div class="feature-icon">🌟</div>
                     <h3 class="feature-title">Community Rankings</h3>
-                    <p class="feature-text">Discover the best-rated outfits from fashion enthusiasts worldwide. Browse rankings filtered by time period, search by user or style, and sort by newest or best ratings.</p>
+                    <p class="feature-text">Discover the best-rated outfits from fashion enthusiasts worldwide. Browse rankings filtered by time period and sort by newest or best ratings.</p>
                 </div>
-
-                <!-- Feature 4 -->
                 <div class="feature-card card-animate">
                     <div class="feature-icon">👥</div>
                     <h3 class="feature-title">Social Features</h3>
                     <p class="feature-text">Share your style, follow other users, like outfits, and save favorites. Build your fashion network and connect with style enthusiasts.</p>
                 </div>
-
-                <!-- Feature 5 -->
                 <div class="feature-card card-animate">
                     <div class="feature-icon">📊</div>
                     <h3 class="feature-title">Your Profile</h3>
-                    <p class="feature-text">View your rating history, save outfits you love, track your stats (followers, following, likes), and customize your profile with bio and social links.</p>
+                    <p class="feature-text">View your rating history, save outfits you love, track your stats, and customize your profile with bio and social links.</p>
                 </div>
-
-                <!-- Feature 6 -->
                 <div class="feature-card card-animate">
                     <div class="feature-icon">🔒</div>
                     <h3 class="feature-title">Privacy First</h3>
-                    <p class="feature-text">Secure Sign in with Apple authentication. Your data stays on your device. Share only what you want with complete control over your privacy.</p>
+                    <p class="feature-text">Secure Sign in with Apple authentication. Your data stays on your device. Share only what you want with complete control.</p>
                 </div>
             </div>
         </div>
@@ -88,23 +134,26 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="section how-it-works-section section-animate" data-animate="fade-up">
+    <section class="section how-it-works-section section-animate" id="how-it-works">
         <div class="section-border-top"></div>
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <h2 class="section-title">
+                <span class="text-normal">How It</span>
+                <span class="text-accent">Works</span>
+            </h2>
             <div class="steps">
                 <div class="step step-animate">
                     <div class="step-number">1</div>
                     <div class="step-icon">📷</div>
                     <h3 class="step-title">Capture</h3>
-                    <p class="step-text">Take a photo of your outfit or select from your library</p>
+                    <p class="step-text">Take a photo or select from library</p>
                 </div>
                 <div class="step-arrow">→</div>
                 <div class="step step-animate">
                     <div class="step-number">2</div>
                     <div class="step-icon">🤖</div>
                     <h3 class="step-title">Analyze</h3>
-                    <p class="step-text">Our AI analyzes your style in seconds</p>
+                    <p class="step-text">AI analyzes your style in seconds</p>
                 </div>
                 <div class="step-arrow">→</div>
                 <div class="step step-animate">
@@ -118,21 +167,21 @@
                     <div class="step-number">4</div>
                     <div class="step-icon">📤</div>
                     <h3 class="step-title">Share</h3>
-                    <p class="step-text">Share your outfit to the community rankings</p>
+                    <p class="step-text">Share to community rankings</p>
                 </div>
                 <div class="step-arrow">→</div>
                 <div class="step step-animate">
                     <div class="step-number">5</div>
                     <div class="step-icon">🔍</div>
                     <h3 class="step-title">Explore</h3>
-                    <p class="step-text">Discover top-rated styles from others</p>
+                    <p class="step-text">Discover top-rated styles</p>
                 </div>
                 <div class="step-arrow">→</div>
                 <div class="step step-animate">
                     <div class="step-number">6</div>
                     <div class="step-icon">💾</div>
                     <h3 class="step-title">Save</h3>
-                    <p class="step-text">Save outfits you love to your collection</p>
+                    <p class="step-text">Save outfits you love</p>
                 </div>
             </div>
         </div>
@@ -140,10 +189,13 @@
     </section>
 
     <!-- Why Section -->
-    <section class="section why-section section-animate" data-animate="fade-up">
+    <section class="section why-section section-animate" id="why">
         <div class="section-border-top"></div>
         <div class="container">
-            <h2 class="section-title">Why AI Outfit Rating?</h2>
+            <h2 class="section-title">
+                <span class="text-normal">Why</span>
+                <span class="text-accent">AI Outfit Rating?</span>
+            </h2>
             <div class="why-grid">
                 <div class="why-item card-animate">
                     <h3>⚡ Instant Feedback</h3>
@@ -151,7 +203,7 @@
                 </div>
                 <div class="why-item card-animate">
                     <h3>📝 Detailed Analysis</h3>
-                    <p>More than just a score - get actionable feedback</p>
+                    <p>More than just a score - actionable feedback</p>
                 </div>
                 <div class="why-item card-animate">
                     <h3>🌐 Community Driven</h3>
@@ -171,10 +223,13 @@
     </section>
 
     <!-- Tech Stack Section -->
-    <section class="section tech-section section-animate" data-animate="fade-up">
+    <section class="section tech-section section-animate" id="tech">
         <div class="section-border-top"></div>
         <div class="container">
-            <h2 class="section-title">Built With</h2>
+            <h2 class="section-title">
+                <span class="text-normal">Built</span>
+                <span class="text-accent">With</span>
+            </h2>
             <div class="tech-grid">
                 <div class="tech-item card-animate">
                     <strong>SwiftUI</strong>
