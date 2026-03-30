@@ -1,266 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Outfit Rating - Get Instant Style Feedback</title>
-    <meta name="description" content="AI-powered outfit rating app that analyzes your style and provides detailed feedback using GPT-4 Vision">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mog AI — AI Face Rating &amp; Competitive Rankings</title>
+  <meta name="description" content="Get your AI-powered face rating across 8 categories. Track your glow up, compete on leaderboards, and unlock personalized coaching. Free on iOS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">👔</span>
-                <span class="logo-text">Driply</span>
-            </div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#why">Why</a>
-                <a href="#tech">Tech</a>
-            </div>
-            <div class="nav-actions">
-                <a href="#" class="nav-link">Learn More</a>
-                <a href="#" class="nav-button">Get Started</a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="text-normal">Transform Your</span><br>
-                    <span class="text-accent">Style</span>
-                    <span class="text-normal">with</span><br>
-                    <span class="text-accent">AI-Powered</span>
-                    <span class="text-normal">Fashion</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Get instant, intelligent outfit ratings powered by GPT-4 Vision. Discover your best looks and join a community of fashion enthusiasts.
-                </p>
-                <div class="hero-cta">
-                    <a href="#" class="cta-primary">
-                        Start Rating
-                        <span class="cta-icon">→</span>
-                    </a>
-                    <a href="#how-it-works" class="cta-secondary">Learn How</a>
-                </div>
+  <!-- Ambient orbs -->
+  <div class="orb orb--purple" aria-hidden="true"></div>
+  <div class="orb orb--gold" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">MOG<span class="nav-logo-badge">AI</span></a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#tiers">Tiers</a>
+        <a href="#pro">Pro</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+      <a href="#download" class="nav-cta">Download Free</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" aria-hidden="true">
+    <button class="nav-drawer-close" aria-label="Close menu">&times;</button>
+    <div class="nav-drawer-inner">
+      <a href="#features">Features</a>
+      <a href="#tiers">Tiers</a>
+      <a href="#pro">Pro</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="#download">Download</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <!-- Left column -->
+      <div class="hero-left">
+        <span class="hero-eyebrow">AI-Powered Face Rating</span>
+        <h1 class="hero-h1">
+          <span class="hero-h1-line1">KNOW YOUR</span>
+          <span class="hero-h1-line2">RATING.</span>
+        </h1>
+        <p class="hero-sub">8-category AI analysis. Real coaching. Track your glow up.</p>
+        <div class="hero-ctas">
+          <a href="#download" class="btn-primary">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="white" aria-hidden="true">
+              <path d="M 18.71,19.5 C 17.23,21.27 15.73,21.57 15.4,21.57 C 15.06,21.57 14.24,21.3 13.51,21.3 C 12.75,21.3 11.9,21.57 11.52,21.57 C 10.97,21.57 9.53,21.17 8.27,19.5 C 7.57,18.55 7,17.2 6.6,15.6 C 6.16,13.9 5.97,12.28 6,10.72 C 6.04,8.08 6.87,6.64 8.17,5.85 C 8.8,5.46 9.62,5.14 10.57,5.14 C 11.27,5.14 12.22,5.43 12.78,5.43 C 13.37,5.43 14.24,5.07 15.43,5.07 C 16.3,5.07 17.43,5.35 18.27,6.14 C 17.77,6.44 16.75,7.11 16.78,8.65 C 16.8,10.58 18.07,11.32 18.43,11.54 C 18.17,12.41 17.42,14.1 15.73,15.08 Z M 15.14,3.84 C 14.54,4.55 13.64,5.13 12.67,5.05 C 12.55,4.1 13,3.1 13.58,2.42 C 14.17,1.72 15.12,1.17 16.01,1.14 C 16.12,2.14 15.72,3.14 15.14,3.84 Z"/>
+            </svg>
+            Get Rated Free
+          </a>
+          <a href="#features" class="btn-secondary">See How It Works</a>
+        </div>
+      </div>
+
+      <!-- Right column — App card mock -->
+      <div class="hero-right">
+        <div class="hero-card-glow-purple" aria-hidden="true"></div>
+        <div class="hero-card-glow-gold" aria-hidden="true"></div>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span class="hero-card-user">@mog_master</span>
+            <span class="hero-card-tier">Above Average</span>
+          </div>
+
+          <!-- Score ring -->
+          <div class="hero-card-ring">
+            <div class="score-ring-wrap">
+              <svg viewBox="0 0 160 160" aria-hidden="true">
+                <defs>
+                  <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FF8500"/>
+                    <stop offset="100%" stop-color="#FFB627"/>
+                  </linearGradient>
+                </defs>
+                <circle class="score-ring-track" cx="80" cy="80" r="65"/>
+                <circle class="score-ring-progress" id="hero-ring" cx="80" cy="80" r="65" stroke="url(#scoreGradient)" data-score="78"/>
+              </svg>
+              <div class="score-ring-text">
+                <span class="score-ring-number" id="hero-score" data-count-to="78">0</span>
+                <span class="score-ring-label">/ 100</span>
+              </div>
             </div>
-            <div class="hero-visual">
-                <div class="visual-card">
-                    <div class="card-header">
-                        <div class="card-profile">
-                            <div class="profile-avatar">👤</div>
-                            <span class="profile-name">fashionista_ai</span>
-                        </div>
-                    </div>
-                    <div class="card-image">
-                        <div class="image-placeholder">
-                            <span class="image-icon">📸</span>
-                            <p>Outfit Rating</p>
-                        </div>
-                    </div>
-                    <div class="card-indicators">
-                        <span class="indicator active"></span>
-                        <span class="indicator"></span>
-                        <span class="indicator"></span>
-                    </div>
-                </div>
+          </div>
+
+          <!-- Category breakdown -->
+          <div class="hero-card-breakdown-label">Category Breakdown</div>
+          <div class="category-bar"><span class="category-bar-name">Jawline</span><div class="category-bar-track"><div class="category-bar-fill" data-width="82%"></div></div><span class="category-bar-score">82</span></div>
+          <div class="category-bar"><span class="category-bar-name">Eye Area</span><div class="category-bar-track"><div class="category-bar-fill" data-width="75%"></div></div><span class="category-bar-score">75</span></div>
+          <div class="category-bar"><span class="category-bar-name">Facial Structure</span><div class="category-bar-track"><div class="category-bar-fill" data-width="71%"></div></div><span class="category-bar-score">71</span></div>
+          <div class="category-bar"><span class="category-bar-name">Symmetry</span><div class="category-bar-track"><div class="category-bar-fill" data-width="78%"></div></div><span class="category-bar-score">78</span></div>
+          <div class="category-bar"><span class="category-bar-name">Skin Quality</span><div class="category-bar-track"><div class="category-bar-fill" data-width="68%"></div></div><span class="category-bar-score">68</span></div>
+          <div class="category-bar"><span class="category-bar-name">Hair</span><div class="category-bar-track"><div class="category-bar-fill" data-width="80%"></div></div><span class="category-bar-score">80</span></div>
+          <div class="category-bar"><span class="category-bar-name">Gender Features</span><div class="category-bar-track"><div class="category-bar-fill" data-width="74%"></div></div><span class="category-bar-score">74</span></div>
+          <div class="category-bar"><span class="category-bar-name">Overall</span><div class="category-bar-track"><div class="category-bar-fill" data-width="78%"></div></div><span class="category-bar-score">78</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIERS ===== -->
+  <section class="section tiers-section" id="tiers">
+    <div class="container">
+      <span class="section-eyebrow animate-on-scroll">THE TIER SYSTEM</span>
+      <h2 class="section-heading animate-on-scroll">5 Tiers. Infinite Motivation.</h2>
+
+      <div class="tiers-row">
+        <div class="tier-card tier-card--below-avg animate-on-scroll slide-x" data-delay="0">
+          <div class="tier-card-range">0 &ndash; 49</div>
+          <div class="tier-card-name">Below Average</div>
+          <div class="tier-card-desc">Building your foundation</div>
+        </div>
+        <div class="tier-card tier-card--average animate-on-scroll slide-x" data-delay="80">
+          <div class="tier-card-range">50 &ndash; 64</div>
+          <div class="tier-card-name">Average</div>
+          <div class="tier-card-desc">The majority</div>
+        </div>
+        <div class="tier-card tier-card--above-avg animate-on-scroll slide-x" data-delay="160">
+          <div class="tier-card-range">65 &ndash; 79</div>
+          <div class="tier-card-name">Above Average</div>
+          <div class="tier-card-desc">Standing out</div>
+        </div>
+        <div class="tier-card tier-card--attractive animate-on-scroll slide-x" data-delay="240">
+          <div class="tier-card-range">80 &ndash; 89</div>
+          <div class="tier-card-name">Attractive</div>
+          <div class="tier-card-desc">Clearly attractive</div>
+        </div>
+        <div class="tier-card tier-card--mog animate-on-scroll slide-x" data-delay="320">
+          <svg class="tier-card-crown" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M2 18L4 8L9 12L12 4L15 12L20 8L22 18H2Z" fill="url(#crownGrad)" stroke="none"/>
+            <defs><linearGradient id="crownGrad" x1="2" y1="4" x2="22" y2="18"><stop stop-color="#9D4EDD"/><stop offset="0.5" stop-color="#F72585"/><stop offset="1" stop-color="#FF6B35"/></linearGradient></defs>
+          </svg>
+          <div class="tier-card-range">90 &ndash; 100</div>
+          <div class="tier-card-name">Mog Tier</div>
+          <div class="tier-card-desc">Elite tier</div>
+          <span class="tier-card-elite-badge">Elite 5%</span>
+        </div>
+      </div>
+
+      <!-- Spectrum bar -->
+      <div class="tier-spectrum animate-on-scroll">
+        <div class="tier-spectrum-bar"></div>
+        <div class="tier-spectrum-labels">
+          <span style="left: 10%">Below Avg</span>
+          <span style="left: 30%">Average</span>
+          <span style="left: 55%">Above Avg</span>
+          <span style="left: 75%">Attractive</span>
+          <span style="left: 92%">Mog</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES / CATEGORIES ===== -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <span class="section-eyebrow animate-on-scroll">COMPREHENSIVE ANALYSIS</span>
+      <h2 class="section-heading animate-on-scroll">8 Categories. Zero Guesswork.</h2>
+
+      <div class="features-layout">
+        <div class="features-nav">
+          <button class="features-nav-pill active" data-target="cat-facial-structure">Facial Structure</button>
+          <button class="features-nav-pill" data-target="cat-jawline">Jawline</button>
+          <button class="features-nav-pill" data-target="cat-eye-area">Eye Area</button>
+          <button class="features-nav-pill" data-target="cat-skin-quality">Skin Quality</button>
+          <button class="features-nav-pill" data-target="cat-symmetry">Symmetry</button>
+          <button class="features-nav-pill" data-target="cat-hair">Hair</button>
+          <button class="features-nav-pill" data-target="cat-gender">Gender-Specific</button>
+          <button class="features-nav-pill" data-target="cat-overall">Overall Potential</button>
+        </div>
+
+        <div class="features-content">
+          <div class="feature-card animate-on-scroll" id="cat-facial-structure" data-category>
+            <h3 class="feature-card-title">Facial Structure</h3>
+            <p class="feature-card-desc">Bone geometry, proportions, and facial width-to-height ratio. The foundational framework that defines your overall face shape.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="71%"></div></div>
+              <span class="feature-card-bar-score">71</span>
             </div>
-        </div>
-    </section>
-
-    <!-- What is Section -->
-    <section class="section section-animate" id="features">
-        <div class="section-border-top"></div>
-        <div class="container">
-            <h2 class="section-title">
-                <span class="text-normal">What is</span>
-                <span class="text-accent">AI Outfit Rating?</span>
-            </h2>
-            <p class="section-text">
-                AI Outfit Rating is an iOS app that uses advanced AI technology to analyze your outfits and provide detailed ratings and feedback. Whether you're choosing what to wear or exploring fashion trends, get instant, intelligent style analysis powered by GPT-4 Vision.
-            </p>
-        </div>
-        <div class="section-border-bottom"></div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="section features-section section-animate">
-        <div class="section-border-top"></div>
-        <div class="container">
-            <h2 class="section-title">
-                <span class="text-normal">Key</span>
-                <span class="text-accent">Features</span>
-            </h2>
-            <div class="features-grid">
-                <div class="feature-card card-animate">
-                    <div class="feature-icon">🤖</div>
-                    <h3 class="feature-title">AI-Powered Analysis</h3>
-                    <p class="feature-text">Get detailed outfit ratings with scores from 0-100, complete with comprehensive feedback on fit, style, color coordination, and overall aesthetic.</p>
-                </div>
-                <div class="feature-card card-animate">
-                    <div class="feature-icon">📸</div>
-                    <h3 class="feature-title">Instant Rating</h3>
-                    <p class="feature-text">Simply take a photo or select one from your library. Our AI analyzes your outfit in seconds and provides overall scores and detailed feedback.</p>
-                </div>
-                <div class="feature-card card-animate">
-                    <div class="feature-icon">🌟</div>
-                    <h3 class="feature-title">Community Rankings</h3>
-                    <p class="feature-text">Discover the best-rated outfits from fashion enthusiasts worldwide. Browse rankings filtered by time period and sort by newest or best ratings.</p>
-                </div>
-                <div class="feature-card card-animate">
-                    <div class="feature-icon">👥</div>
-                    <h3 class="feature-title">Social Features</h3>
-                    <p class="feature-text">Share your style, follow other users, like outfits, and save favorites. Build your fashion network and connect with style enthusiasts.</p>
-                </div>
-                <div class="feature-card card-animate">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Your Profile</h3>
-                    <p class="feature-text">View your rating history, save outfits you love, track your stats, and customize your profile with bio and social links.</p>
-                </div>
-                <div class="feature-card card-animate">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Privacy First</h3>
-                    <p class="feature-text">Secure Sign in with Apple authentication. Your data stays on your device. Share only what you want with complete control.</p>
-                </div>
+          </div>
+          <div class="feature-card animate-on-scroll" id="cat-jawline" data-category>
+            <h3 class="feature-card-title">Jawline</h3>
+            <p class="feature-card-desc">Definition, symmetry, and sharpness of jaw and chin. One of the most impactful features for perceived attractiveness.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="82%"></div></div>
+              <span class="feature-card-bar-score">82</span>
             </div>
-        </div>
-        <div class="section-border-bottom"></div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="section how-it-works-section section-animate" id="how-it-works">
-        <div class="section-border-top"></div>
-        <div class="container">
-            <h2 class="section-title">
-                <span class="text-normal">How It</span>
-                <span class="text-accent">Works</span>
-            </h2>
-            <div class="steps">
-                <div class="step step-animate">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">📷</div>
-                    <h3 class="step-title">Capture</h3>
-                    <p class="step-text">Take a photo or select from library</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step step-animate">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">🤖</div>
-                    <h3 class="step-title">Analyze</h3>
-                    <p class="step-text">AI analyzes your style in seconds</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step step-animate">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">⭐</div>
-                    <h3 class="step-title">Rate</h3>
-                    <p class="step-text">Get detailed scores and feedback</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step step-animate">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">📤</div>
-                    <h3 class="step-title">Share</h3>
-                    <p class="step-text">Share to community rankings</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step step-animate">
-                    <div class="step-number">5</div>
-                    <div class="step-icon">🔍</div>
-                    <h3 class="step-title">Explore</h3>
-                    <p class="step-text">Discover top-rated styles</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step step-animate">
-                    <div class="step-number">6</div>
-                    <div class="step-icon">💾</div>
-                    <h3 class="step-title">Save</h3>
-                    <p class="step-text">Save outfits you love</p>
-                </div>
+          </div>
+          <div class="feature-card animate-on-scroll" id="cat-eye-area" data-category>
+            <h3 class="feature-card-title">Eye Area</h3>
+            <p class="feature-card-desc">Shape, size, spacing, color, and frame quality. The eyes convey expression and are central to facial harmony.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="75%"></div></div>
+              <span class="feature-card-bar-score">75</span>
             </div>
-        </div>
-        <div class="section-border-bottom"></div>
-    </section>
-
-    <!-- Why Section -->
-    <section class="section why-section section-animate" id="why">
-        <div class="section-border-top"></div>
-        <div class="container">
-            <h2 class="section-title">
-                <span class="text-normal">Why</span>
-                <span class="text-accent">AI Outfit Rating?</span>
-            </h2>
-            <div class="why-grid">
-                <div class="why-item card-animate">
-                    <h3>⚡ Instant Feedback</h3>
-                    <p>No waiting, get ratings in seconds</p>
-                </div>
-                <div class="why-item card-animate">
-                    <h3>📝 Detailed Analysis</h3>
-                    <p>More than just a score - actionable feedback</p>
-                </div>
-                <div class="why-item card-animate">
-                    <h3>🌐 Community Driven</h3>
-                    <p>See what's trending and get inspired</p>
-                </div>
-                <div class="why-item card-animate">
-                    <h3>📈 Your Style Journey</h3>
-                    <p>Track your fashion evolution over time</p>
-                </div>
-                <div class="why-item card-animate">
-                    <h3>🔐 Privacy Focused</h3>
-                    <p>Your data, your control</p>
-                </div>
+          </div>
+          <div class="feature-card animate-on-scroll" id="cat-skin-quality" data-category>
+            <h3 class="feature-card-title">Skin Quality</h3>
+            <p class="feature-card-desc">Clarity, texture, and evenness of complexion. A high-impact area where targeted improvements show fast results.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="68%"></div></div>
+              <span class="feature-card-bar-score">68</span>
             </div>
-        </div>
-        <div class="section-border-bottom"></div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section class="section tech-section section-animate" id="tech">
-        <div class="section-border-top"></div>
-        <div class="container">
-            <h2 class="section-title">
-                <span class="text-normal">Built</span>
-                <span class="text-accent">With</span>
-            </h2>
-            <div class="tech-grid">
-                <div class="tech-item card-animate">
-                    <strong>SwiftUI</strong>
-                    <span>Beautiful, modern iOS interface</span>
-                </div>
-                <div class="tech-item card-animate">
-                    <strong>OpenAI GPT-4 Vision</strong>
-                    <span>State-of-the-art AI analysis</span>
-                </div>
-                <div class="tech-item card-animate">
-                    <strong>Sign in with Apple</strong>
-                    <span>Secure, privacy-first authentication</span>
-                </div>
-                <div class="tech-item card-animate">
-                    <strong>Local Storage</strong>
-                    <span>Fast, reliable data persistence</span>
-                </div>
+          </div>
+          <div class="feature-card animate-on-scroll" id="cat-symmetry" data-category>
+            <h3 class="feature-card-title">Symmetry</h3>
+            <p class="feature-card-desc">Left-to-right balance and overall proportional harmony. Symmetry is a core driver of perceived beauty across cultures.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="78%"></div></div>
+              <span class="feature-card-bar-score">78</span>
             </div>
+          </div>
+          <div class="feature-card animate-on-scroll" id="cat-hair" data-category>
+            <h3 class="feature-card-title">Hair</h3>
+            <p class="feature-card-desc">Style, condition, and how it frames your face. One of the easiest categories to improve with the right guidance.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="80%"></div></div>
+              <span class="feature-card-bar-score">80</span>
+            </div>
+          </div>
+          <div class="feature-card animate-on-scroll" id="cat-gender" data-category>
+            <h3 class="feature-card-title">Gender-Specific Features</h3>
+            <p class="feature-card-desc">Masculine or feminine marker strength. Evaluates how strongly your features express gender-specific traits.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="74%"></div></div>
+              <span class="feature-card-bar-score">74</span>
+            </div>
+          </div>
+          <div class="feature-card animate-on-scroll" id="cat-overall" data-category>
+            <h3 class="feature-card-title">Overall Potential</h3>
+            <p class="feature-card-desc">Your composite coaching score and upside. This reflects where you are now and how much room you have to improve.</p>
+            <div class="feature-card-bar">
+              <span class="feature-card-bar-label">Your score</span>
+              <div class="feature-card-bar-track"><div class="feature-card-bar-fill" data-width="78%"></div></div>
+              <span class="feature-card-bar-score">78</span>
+            </div>
+          </div>
         </div>
-        <div class="section-border-bottom"></div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="section-border-top"></div>
-        <div class="container">
-            <p>Made with ❤️ using SwiftUI</p>
-            <p class="footer-subtext">Download and start rating your outfits today!</p>
+  <!-- ===== COACHING ===== -->
+  <section class="section coaching-section">
+    <div class="container">
+      <div class="coaching-layout">
+        <!-- Left: animated coaching card -->
+        <div class="animate-on-scroll">
+          <div class="coaching-card" id="coaching-card">
+            <div class="coaching-card-header">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#8B5CF6"/></svg>
+              <span class="coaching-card-title">Your Coaching Report</span>
+            </div>
+            <div class="coaching-tip" id="coaching-tip">
+              <svg class="coaching-tip-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="coaching-tip-text" id="coaching-tip-text">Try jawline exercises 3x weekly for definition</span>
+            </div>
+            <p class="coaching-card-more">+ 2 more insights in your full report</p>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- Right: copy -->
+        <div class="coaching-right animate-on-scroll" data-delay="100">
+          <span class="section-eyebrow">PERSONALIZED COACHING</span>
+          <h2 class="coaching-h2">Get told exactly what to fix.</h2>
+          <p class="coaching-body">Our AI identifies your highest-impact improvements &mdash; things you can actually change. Grooming, skincare, style, fitness angles.</p>
+
+          <div class="coaching-free-box">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Free: AI score + top 3 coaching tips</span>
+          </div>
+
+          <div class="coaching-pro-heading">Unlock the full toolkit</div>
+
+          <div class="coaching-pro-pill">
+            <div class="coaching-pro-pill-header">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#F59E0B" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#F59E0B" stroke-width="2"/></svg>
+              <span class="coaching-pro-pill-name">Detailed Advice</span>
+              <span class="coaching-pro-badge">PRO</span>
+            </div>
+            <div class="coaching-pro-pill-desc">Expanded per-category deep dives with specific action items.</div>
+          </div>
+          <div class="coaching-pro-pill">
+            <div class="coaching-pro-pill-header">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#F59E0B" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#F59E0B" stroke-width="2"/></svg>
+              <span class="coaching-pro-pill-name">Product Picks</span>
+              <span class="coaching-pro-badge">PRO</span>
+            </div>
+            <div class="coaching-pro-pill-desc">Brand recommendations tailored to your profile and goals.</div>
+          </div>
+          <div class="coaching-pro-pill">
+            <div class="coaching-pro-pill-header">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#F59E0B" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#F59E0B" stroke-width="2"/></svg>
+              <span class="coaching-pro-pill-name">7-Day Routine</span>
+              <span class="coaching-pro-badge">PRO</span>
+            </div>
+            <div class="coaching-pro-pill-desc">Day-by-day improvement plan built from your analysis.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL / COMPETITIVE ===== -->
+  <section class="section social-section">
+    <div class="container">
+      <span class="section-eyebrow animate-on-scroll">COMPETITIVE LAYER</span>
+      <h2 class="section-heading animate-on-scroll">It's Not Just a Rating. It's a Ranking.</h2>
+
+      <div class="social-grid">
+        <!-- Tile 1: Leaderboards -->
+        <div class="social-tile animate-on-scroll" data-delay="0">
+          <div class="social-tile-icon">
+            <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba(245,158,11,0.5))">
+              <path d="M18 3L22.5 10.5L31 12L25 18.5L26 27L18 23L10 27L11 18.5L5 12L13.5 10.5L18 3Z" fill="#F59E0B"/>
+            </svg>
+          </div>
+          <h3>Global Leaderboards</h3>
+          <p>Compete with thousands. Share your score. Climb the ranks.</p>
+          <div class="mini-leaderboard">
+            <div class="mini-lb-row"><span class="mini-lb-rank mini-lb-rank--gold">1</span><span class="mini-lb-name">User_847</span><span class="mini-lb-score">96</span></div>
+            <div class="mini-lb-row"><span class="mini-lb-rank mini-lb-rank--silver">2</span><span class="mini-lb-name">User_312</span><span class="mini-lb-score">93</span></div>
+            <div class="mini-lb-row"><span class="mini-lb-rank mini-lb-rank--bronze">3</span><span class="mini-lb-name">User_591</span><span class="mini-lb-score">91</span></div>
+          </div>
+        </div>
+
+        <!-- Tile 2: Battles -->
+        <div class="social-tile animate-on-scroll" data-delay="80">
+          <div class="social-tile-icon">
+            <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba(245,158,11,0.5))">
+              <path d="M20 4L10 20H17L16 32L26 16H19L20 4Z" fill="#F59E0B"/>
+            </svg>
+          </div>
+          <h3>Head-to-Head Battles</h3>
+          <p>Challenge anyone. Category-by-category matchups. Only one wins.</p>
+          <div class="mini-vs">
+            <div class="mini-vs-box">82</div>
+            <span class="mini-vs-text">VS</span>
+            <div class="mini-vs-box">74</div>
+          </div>
+        </div>
+
+        <!-- Tile 3: Leagues -->
+        <div class="social-tile animate-on-scroll" data-delay="160">
+          <div class="social-tile-icon">
+            <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba(245,158,11,0.5))">
+              <path d="M18 3L6 10V18C6 25.7 11.1 32.3 18 34C24.9 32.3 30 25.7 30 18V10L18 3Z" fill="url(#shieldGrad)"/>
+              <defs><linearGradient id="shieldGrad" x1="6" y1="3" x2="30" y2="34"><stop stop-color="#9D4EDD"/><stop offset="1" stop-color="#F72585"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3>Seasonal Leagues</h3>
+          <p>Progress from Bronze to Platinum. Every battle counts.</p>
+          <div class="league-badges">
+            <div class="league-badge league-badge--bronze">B</div>
+            <div class="league-badge league-badge--silver">S</div>
+            <div class="league-badge league-badge--gold">G</div>
+            <div class="league-badge league-badge--platinum">P</div>
+          </div>
+        </div>
+
+        <!-- Tile 4: Streaks -->
+        <div class="social-tile animate-on-scroll" data-delay="240">
+          <div class="social-tile-icon">
+            <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba(245,158,11,0.5))">
+              <path d="M20 4L10 20H17L16 32L26 16H19L20 4Z" fill="#F59E0B"/>
+            </svg>
+          </div>
+          <h3>Streaks &amp; Achievements</h3>
+          <p>Build momentum. Daily streaks unlock badges and bonuses.</p>
+          <div class="mini-streak">
+            <span class="mini-streak-count">14</span>
+            <span class="mini-streak-label">day streak</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRO ===== -->
+  <section class="section pro-section" id="pro">
+    <div class="container">
+      <div class="pro-card animate-on-scroll">
+        <div class="pro-card-inner">
+          <div class="pro-crown">
+            <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M4 30L8 14L16 20L20 6L24 20L32 14L36 30H4Z" fill="url(#proCrown)"/>
+              <defs><linearGradient id="proCrown" x1="4" y1="6" x2="36" y2="30"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h2 class="pro-h2">Go Pro. Go Further.</h2>
+          <p class="pro-subtitle">Everything in Free, plus the tools to actually level up.</p>
+
+          <div class="pro-comparison">
+            <div>
+              <div class="pro-col-heading pro-col-heading--free">Free</div>
+              <div class="pro-item pro-item--free">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                AI face rating
+              </div>
+              <div class="pro-item pro-item--free">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                8-category score
+              </div>
+              <div class="pro-item pro-item--free">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Tier placement
+              </div>
+              <div class="pro-item pro-item--free">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Top 3 coaching tips
+              </div>
+              <div class="pro-item pro-item--free">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Community rankings
+              </div>
+            </div>
+            <div>
+              <div class="pro-col-heading pro-col-heading--pro">Pro</div>
+              <div class="pro-item pro-item--pro">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#A78BFA"/></svg>
+                Detailed category advice
+              </div>
+              <div class="pro-item pro-item--pro">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#A78BFA"/></svg>
+                Product recommendations
+              </div>
+              <div class="pro-item pro-item--pro">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#A78BFA"/></svg>
+                7-Day routine plan
+              </div>
+              <div class="pro-item pro-item--pro">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#A78BFA"/></svg>
+                Unlimited daily ratings
+              </div>
+              <div class="pro-item pro-item--pro">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#A78BFA"/></svg>
+                Full Pro badge
+              </div>
+            </div>
+          </div>
+
+          <a href="#download" class="pro-cta">Unlock Pro on the App Store</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOWNLOAD CTA ===== -->
+  <section class="section download-section" id="download">
+    <div class="download-orb" aria-hidden="true"></div>
+    <div class="container">
+      <div class="download-inner">
+        <!-- Phone mockup -->
+        <div class="phone-mock animate-on-scroll">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-ring">
+            <div class="score-ring-wrap" style="width:120px;height:120px;">
+              <svg viewBox="0 0 120 120" class="phone-score-ring" aria-hidden="true">
+                <defs>
+                  <linearGradient id="dlScoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#9D4EDD"/>
+                    <stop offset="50%" stop-color="#F72585"/>
+                    <stop offset="100%" stop-color="#FF6B35"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+                <circle id="dl-ring" cx="60" cy="60" r="50" fill="none" stroke="url(#dlScoreGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="314.159" stroke-dashoffset="314.159" data-score="85" data-circumference="314.159"/>
+              </svg>
+              <div class="phone-score-text">
+                <span class="phone-score-number" id="dl-score" data-count-to="85">0</span>
+                <span class="phone-score-label">/ 100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="download-eyebrow animate-on-scroll" data-delay="50">AVAILABLE ON IOS</span>
+        <h2 class="download-h2 animate-on-scroll" data-delay="100">Find Out Where You Stand.</h2>
+        <p class="download-sub animate-on-scroll" data-delay="150">Free to start. Results in 30 seconds.</p>
+
+        <a href="#download" class="app-store-badge animate-on-scroll" data-delay="200">
+          <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M 18.71,19.5 C 17.23,21.27 15.73,21.57 15.4,21.57 C 15.06,21.57 14.24,21.3 13.51,21.3 C 12.75,21.3 11.9,21.57 11.52,21.57 C 10.97,21.57 9.53,21.17 8.27,19.5 C 7.57,18.55 7,17.2 6.6,15.6 C 6.16,13.9 5.97,12.28 6,10.72 C 6.04,8.08 6.87,6.64 8.17,5.85 C 8.8,5.46 9.62,5.14 10.57,5.14 C 11.27,5.14 12.22,5.43 12.78,5.43 C 13.37,5.43 14.24,5.07 15.43,5.07 C 16.3,5.07 17.43,5.35 18.27,6.14 C 17.77,6.44 16.75,7.11 16.78,8.65 C 16.8,10.58 18.07,11.32 18.43,11.54 C 18.17,12.41 17.42,14.1 15.73,15.08 Z M 15.14,3.84 C 14.54,4.55 13.64,5.13 12.67,5.05 C 12.55,4.1 13,3.1 13.58,2.42 C 14.17,1.72 15.12,1.17 16.01,1.14 C 16.12,2.14 15.72,3.14 15.14,3.84 Z"/>
+          </svg>
+          <div class="badge-text">
+            <span class="badge-top">Download on the</span>
+            <span class="badge-bottom">App Store</span>
+          </div>
+        </a>
+
+        <p class="download-aspire animate-on-scroll" data-delay="250">Start your journey today.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">MOG AI</div>
+        <p class="footer-desc">The AI-powered appearance rating platform for iOS.</p>
+        <p class="footer-disclaimer">For informational and entertainment use only. Not a medical service or diagnostic tool.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#features">Features</a>
+          <a href="#tiers">Tiers</a>
+          <a href="#pro">Pro</a>
+          <a href="#download">Download</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+        <p class="footer-contact">Questions? Reach us through the official Mog AI support channels.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mog AI. All rights reserved.</span>
+      <span>AI ratings may vary.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
