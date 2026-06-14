@@ -28,8 +28,8 @@
   --radius-lg:  16px;
   --radius-xl:  20px;
   --radius-pill: 100px;
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Clash Display', 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
 
   --tier-mog:          linear-gradient(135deg, #9D4EDD, #F72585, #FF6B35);
@@ -177,7 +177,7 @@ body.loaded .nav {
   align-items: center;
   gap: 6px;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.5rem;
   color: var(--text-primary);
   text-decoration: none;
@@ -381,7 +381,7 @@ body.loaded .hero-eyebrow {
 
 .hero-h1 {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: clamp(42px, 7vw, 78px);
   line-height: 1.05;
   letter-spacing: -2px;
@@ -611,9 +611,9 @@ body.loaded .hero-right {
 }
 
 .score-ring-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 44px;
   color: var(--text-primary);
   line-height: 1;
 }
@@ -697,7 +697,7 @@ body.loaded .hero-right {
 
 .section-heading {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(28px, 4vw, 44px);
   color: var(--text-primary);
   text-align: center;
@@ -1140,7 +1140,7 @@ body.loaded .hero-right {
 
 .coaching-h2 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(26px, 3.5vw, 38px);
   color: var(--text-primary);
   margin-bottom: 16px;
@@ -1269,6 +1269,7 @@ body.loaded .hero-right {
 }
 
 .social-tile {
+  position: relative;
   background: rgba(20, 20, 38, 0.7);
   -webkit-backdrop-filter: blur(12px) saturate(150%);
   backdrop-filter: blur(12px) saturate(150%);
@@ -1282,6 +1283,26 @@ body.loaded .hero-right {
   border-color: rgba(245, 158, 11, 0.3);
   box-shadow: 0 8px 40px rgba(245, 158, 11, 0.1);
   transform: translateY(-4px);
+}
+
+/* "Coming soon" tiles (features not yet live) */
+.social-tile--soon {
+  opacity: 0.82;
+}
+
+.social-tile-soon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gold-bright);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-pill);
 }
 
 .social-tile-icon {
@@ -1366,7 +1387,7 @@ body.loaded .hero-right {
 
 .mini-vs-text {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 14px;
   color: var(--gold-bright);
 }
@@ -1479,7 +1500,7 @@ body.loaded .hero-right {
 
 .pro-h2 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(28px, 4vw, 40px);
   color: var(--text-primary);
   margin-bottom: 8px;
@@ -1538,6 +1559,26 @@ body.loaded .hero-right {
 
 .pro-item--pro svg {
   color: var(--accent-bold);
+}
+
+/* Single-membership "everything included" grid */
+.pro-included {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 32px;
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.pro-item--inc svg {
+  color: var(--success);
+}
+
+@media (max-width: 600px) {
+  .pro-included {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
 }
 
 .pro-cta {
@@ -1643,7 +1684,7 @@ body.loaded .hero-right {
 
 .download-h2 {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: clamp(32px, 5vw, 52px);
   background: var(--tier-mog);
   -webkit-background-clip: text;
@@ -1721,7 +1762,7 @@ body.loaded .hero-right {
 
 .footer-logo {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 20px;
   color: var(--text-primary);
   margin-bottom: 12px;
@@ -1858,9 +1899,9 @@ body.loaded .hero-right {
 }
 
 .phone-score-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 30px;
+  font-size: 34px;
   color: var(--text-primary);
   line-height: 1;
 }
