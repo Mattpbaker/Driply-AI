@@ -23,11 +23,11 @@
       <header class="legal-header">
         <div class="legal-header-eyebrow">Legal</div>
         <h1 class="legal-title">Privacy Policy</h1>
-        <div class="legal-date-badge">Effective April 2, 2026</div>
+        <div class="legal-date-badge">Effective June 20, 2026</div>
       </header>
 
       <div class="legal-disclaimer-card">
-        <p><strong>Local-first by default.</strong> Mog AI keeps your ratings and photos on your device unless you explicitly choose to share them. You are always in control of what goes public.</p>
+        <p><strong>Local-first by default.</strong> Mog AI keeps your ratings and photos on your device, with a copy in your private iCloud. Your data is for your eyes only — it is never made public or shared with other users.</p>
       </div>
 
       <section class="legal-section">
@@ -36,10 +36,9 @@
         <ul>
           <li><strong>Name</strong> — your display name, collected during onboarding and stored on your device and in iCloud to identify your profile within the app.</li>
           <li><strong>Photos</strong> — selfies you submit for AI face rating, stored on your device and optionally in iCloud as part of your rating history. Profile pictures are also stored in iCloud.</li>
-          <li><strong>Location (coarse)</strong> — your city and country, provided by you during onboarding, stored in iCloud and used to power geographic filters in the Rankings feature.</li>
-          <li><strong>Social handles</strong> — your Instagram, TikTok, and Twitter/X handles, if you choose to add them to your profile. Stored in iCloud and displayed on your public profile.</li>
-          <li><strong>Profile bio</strong> — optional bio text you add to your profile. Stored in iCloud and displayed on your public profile.</li>
-          <li><strong>User ID</strong> — a unique identifier generated for your account, used to link your ratings, profile, battles, and social features together across the app and iCloud.</li>
+          <li><strong>Social handles</strong> — your Instagram, TikTok, and Twitter/X handles, if you choose to add them to your own profile. Stored only in your private iCloud and shown to you on your personal profile within the app; they are not published or shared with anyone else.</li>
+          <li><strong>Profile bio</strong> — optional bio text you add to your own profile. Stored only in your private iCloud and shown to you on your personal profile within the app; it is not published or shared with anyone else.</li>
+          <li><strong>User ID</strong> — a unique identifier generated for your account, used to link your ratings and profile together across the app and iCloud.</li>
           <li><strong>Device ID</strong> — a device-level identifier collected by RevenueCat (our subscription provider) to manage your subscription and restore purchases across devices.</li>
           <li><strong>Purchase history</strong> — your subscription status and in-app purchase records, managed by RevenueCat to determine your Pro entitlement and consumable balances.</li>
           <li><strong>Product interaction</strong> — how you interact with subscription offers and paywalls, tracked by RevenueCat to operate subscription features and measure offer performance.</li>
@@ -48,8 +47,9 @@
 
       <section class="legal-section">
         <h2>How Your Photos Are Processed</h2>
+        <p>Before your first photo is sent for analysis, we ask for your explicit consent. You can withdraw consent anytime in Settings &rarr; Privacy &amp; Data, after which no further photos are sent.</p>
         <p>When you submit a selfie for an AI face rating, your photo is sent over an encrypted connection to xAI (the company behind Grok) for real-time analysis. We have configured this integration with <strong>storage disabled</strong> — xAI processes your photo in memory and discards it the moment the rating response is returned. xAI does not retain your photo, does not store it on their servers, and does not use it to train their models.</p>
-        <p>Your photo is then stored <strong>on your device</strong> as part of your rating history. If you choose to share a rating to the public Rankings, a copy is also stored in your private iCloud database.</p>
+        <p>Your photo is then stored <strong>on your device</strong> as part of your rating history, and a copy may be stored only in your private iCloud (CloudKit) database. Your ratings and photos are never made public or shared with other users.</p>
       </section>
 
       <section class="legal-section">
@@ -58,7 +58,7 @@
         <ul>
           <li><strong>xAI / Grok</strong> (api.x.ai) — processes face photos for AI rating. Real-time only; no data is stored or used for training. <a href="https://x.ai/legal/privacy-policy" target="_blank" rel="noopener">xAI Privacy Policy</a>.</li>
           <li><strong>RevenueCat</strong> — manages subscriptions, in-app purchases, and consumables. Collects device ID, user ID, purchase history, and paywall interaction data. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
-          <li><strong>Apple iCloud / CloudKit</strong> — stores your profile, rating history, photos, and social data in your private and public iCloud databases. Governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
+          <li><strong>Apple iCloud / CloudKit</strong> — stores your profile, rating history, and photos in your private iCloud database. Governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
         </ul>
         <p>We do not use any advertising SDKs, analytics platforms, or data brokers. None of your data is sold or shared for advertising purposes.</p>
       </section>
@@ -67,11 +67,9 @@
         <h2>How Data Is Used</h2>
         <ul>
           <li>Deliver AI face ratings and appearance coaching features.</li>
-          <li>Display your profile, ratings, and social content within the app.</li>
-          <li>Power geographic filtering in the Rankings feature.</li>
+          <li>Display your profile and ratings to you within the app.</li>
+          <li>Provide your personal analysis, coaching, and progress tracking.</li>
           <li>Manage your Pro subscription, consumable ratings, and streak revival purchases.</li>
-          <li>Enable social features including friends, battles, leagues, and rankings.</li>
-          <li>Enforce trust and safety policies (reporting, blocking, abuse controls).</li>
         </ul>
         <p>Your data is never used for advertising, never sold to third parties, and never linked with data from other apps or services for tracking purposes.</p>
       </section>
@@ -82,8 +80,7 @@
         <ul>
           <li>Name</li>
           <li>Photos and profile picture</li>
-          <li>Coarse location (city and country)</li>
-          <li>Social handles and profile bio</li>
+          <li>Social handles and profile bio (stored only in your private profile)</li>
           <li>User ID</li>
           <li>Device ID (via RevenueCat)</li>
           <li>Purchase history and subscription status</li>
@@ -95,8 +92,8 @@
         <h2>Your Controls</h2>
         <ul>
           <li>Delete your rating history and photos in-app.</li>
-          <li>Unshare or delete any content you have shared to Rankings.</li>
-          <li>Remove your profile and social data in-app.</li>
+          <li>Delete your ratings and profile data at any time.</li>
+          <li>Withdraw your AI photo consent anytime in Settings &rarr; Privacy &amp; Data.</li>
           <li>Manage your subscription and restore purchases through your Apple ID settings or in-app.</li>
         </ul>
         <p>To request deletion of all data associated with your account, email us at <a href="mailto:contact@mogai.app">contact@mogai.app</a>.</p>
@@ -108,7 +105,6 @@
           <li>Photos and ratings stored on your device are retained until you delete them.</li>
           <li>Photos and ratings stored in iCloud are retained until you delete them or delete your account.</li>
           <li>Photos sent to xAI for analysis are discarded immediately after processing — zero retention.</li>
-          <li>Shared public content remains visible until you unshare or delete it.</li>
           <li>Purchase records are retained by RevenueCat in accordance with their privacy policy.</li>
         </ul>
       </section>
